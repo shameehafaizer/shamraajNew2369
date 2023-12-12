@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>My Website</title>
+    <meta name="view port" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="booking.css">
+    <script src="main.js" defer></script>
+</head>
+
+    <body>
+        <img src="bedside-lamp-843461_1920.jpg"  class="bg2" alt="bg">
+        <header>
+            <div class="navbar">
+            
+                <ul>
+                    <li> <a href="index.html"> Home </a> </li>
+                    <li> <a href="Branchpage.html">Branches </a> </li>
+                    <li> <a href="Adventurespage.html"> Adventures </a> </li>
+                    <li> <a href="Restaurant.html"> Restaurant </a> </li>
+                </ul>
+            </div>
+           
+        </header>
+
+        <div class="logo2">
+            <img src="newwhitelogo.webp" alt="logo" >
+        </div>
+
+<div class="container">
+<form class="action" id="bookingForm">
+    <div class="user-details">
+        <div class="input-box">
+          <fieldset>
+    <legend><h2>  Bookings & Reservations  </h2> </legend>
+    <br>
+    <br>
+  
+    <label for="nameInput">  Name </label> <br>
+    <input type="text" id="nameInput" name = "name" required > <br>
+    
+    <label for="contactInput"> Contact Number </label> <br>
+    <input type="number" id="contactInput" name="contact" required> <br>
+
+<label for="duration">Duration of Stay (days)</label>
+<input type="number" id="duration" min="1" value="1" name = "duration">
+<br>
+
+         <label for="childrenAbove5Input">  Number_Of_Children_above_5_years_old </label> <br>
+         <input type="number" id="childrenAbove5Input" required name = "guests"> <br> 
+
+         <label for="branchInput">Choose_a_Branch</label> <br>
+         <select name="Branch" id="branchInput"  >   
+             <option value="hambantota">Hambantota</option>
+             <option value="trincomalee">Trincomalee</option>
+             <option value="galle">Galle</option>
+           </select> 
+           <br>
+
+
+         <label for="Room_type"> Room_Type  </label> <br>
+         <select name="Room types" id="Room_type">
+          <option disabled selected value>Select Room Type</option>
+            <option value="Single">Single</option>
+            <option value="Double">Double</option>
+            <option value="Triple">Triple</option>
+            </select>
+
+            <br>
+            <label for="NoofRooms"> Number_Of_Rooms </label> <br>
+            <input type="number" id="NoofRooms" value="1" required name="NoofRooms">
+            <br>
+        
+
+                <p>Extra Requirements: </p>
+                <p>
+                    <input type="checkbox" id="WiFi" name="Extra_Requirements" value="WiFi">
+                    <label for="WiFi">WiFi Access</label>
+                  </p>
+                <br>
+                  <label for="viewType"> Choose_View  </label> <br>
+                  <select name="viewType" id="viewType">
+                     <option value="Garden">Garden View</option>
+                     <option value="Pool">Pool View</option>
+                     <option value="Front">Front View</option>
+                     </select>
+               
+                
+                  
+                  <br><br>
+                  <label for="extrabed" >Extra-Bed</label>
+                  <input type="number" id="extrabed"  name="Extra_Requirements" >
+              <br>
+            </fieldset>     
+              
+<br>
+        
+            <label for="PromoCode">Promo_Code:</label>
+            <input type="text" id="PromoCode" placeholder="Enter promo code" name="promoCode">
+          <br>
+
+         <!-- <div class="button">
+        
+         </div> -->
+        
+         <fieldset>
+          <legend>Current_Booking</legend>
+          <p id="output3">Add Current Bookings</p>
+        </fieldset>
+        <br>
+
+        <fieldset>
+        <legend>Cost of Current_Booking</legend>
+        <p id="CurrentCost">0.00 LKR</p>
+       
+      </fieldset>
+      <br>
+
+
+      <label for="loyaltypoints" id="displayLoyaltyPoints">Loyalty_Points:</label>
+      <p>loyalty Points</p>
+     <input type="button" value="CheckLoyalty" id = "loyaltypoints" name="loyaltyPoints">
+      <br>
+            
+    <input type="button" value="Add To Favorites" id = "addToFavorites">
+    <br>
+      
+        <input type="button" value="Book Now" id = "bookNow">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br> 
+    
+    
+<fieldset>
+  
+   <legend > <h2> Adventure_Booking </h2> </legend>
+    <br> <br>
+    <label for="adventuresInput">Choose_an_Adventure</label> <br>
+    <select name="adventures" id="adventuresInput">   
+        <option value="Oceanic Amusements">Oceanic Amusements</option>
+        <option value="Sightseeing & Historical Tour">Sightseeing & Historical Tour</option>
+        <option value="Yachting Tours">Yachting Tours</option>
+        <option value="Golf Course">Golf Course</option>
+      </select> 
+      <br> 
+<label for="NumberOfAdults(local)">Number_Of_Adults(Local)</label>
+<input type="number" value="0"  id="NumberOfAdults(local)" name="NumberOfAdults">
+<br>
+<br>
+<label for="NumberOfChildren(localandabove)">Number_Of_Children(Local&above5years)</label>
+<input type="number" value="0" id="NumberOfChildren(localandabove)" name="NumberOfChildren">
+<br>
+<br>
+<label for="NumberOfAdultsForeign">Number_Of_Adults(foreign)</label>
+<input type="number" value="0" id="NumberOfAdultsForeign" >
+<br>
+<br>
+<label for="NumberOfChildrenforeignandabove">Number_Of_Children(foreign&above5years)</label>
+<input type="number" value="0" id="NumberOfChildrenforeignandabove" name="Number Of Adults" >
+<p>Guide Needed?</p>
+          <br>
+          <div class="guide_container">
+            <label for="guideAdult" class="needAGuideAdult">Adult:<br>(LKR 1000 is charged per person)</label>
+            <input type="checkbox" id="guideAdult" name="guide" value="adult">
+        
+            <label for="guideChild" class="needAGuidechild">Kids:<br>(LKR 500 is charged per kid)</label>
+            <input type="checkbox" id="guideChild" name="guide" value="child">
+        </div>
+
+</fieldset>
+<br>
+<br>
+
+<fieldset>
+<p id="output4">Adventure: </p>
+<br>
+
+</fieldset>
+ <br>
+  <fieldset>
+    <legend>  OverallBooking  </legend>
+    <br>
+    <p id="overallBooking">
+        0
+    </p>
+    <br>
+  </fieldset><br><br>
+
+  <fieldset>
+    <legend>  OverallCost  </legend>
+    <p id="overallCost">
+        0.00 LKR is your overall cost!
+    </p>
+  </fieldset><br>
+  <br>
+  <div class="button">
+    <input type="button" value="Book Adventure" id = "bookAdventure">
+    <input type="button" value = "Reset" id="reset" >
+  
+    </div>
+    </div></div></form>
+  </div>    
+
+
+
+
+  
+<br>
+<br>
+
+
+
+<footer>
+
+        <h3> Contact Us At-</h3><br>Address : Greenland City, Srilanka <br>032 232 2323<br>
+         &copy; 2023 Shamraaj.All rights reserved.
+    
+</footer>
+</body>
+</html>
